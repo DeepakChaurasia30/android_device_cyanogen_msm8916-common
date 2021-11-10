@@ -101,6 +101,12 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     ueventd.qcom.rc
 
+# 1) zram setup,
+# 2) boosting after boot up
+PRODUCT_PACKAGES += \
+    set_zram.sh \
+    init.boot_boost.sh
+    
 # IRQ balance
 ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),msm8939)
 PRODUCT_COPY_FILES += \
